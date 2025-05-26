@@ -1,10 +1,10 @@
-# Next.js Template
+# Code Snippets
 
-Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
+A modern code snippets collection built with [Next.js](https://nextjs.org/) and TypeScript, designed to help developers quickly find and implement common code patterns and solutions. This project serves as a practical resource for front-end development patterns and best practices.
 
 ## Project Overview
 
-This portfolio website serves as a professional platform to showcase Danial’s work, skills, and personal philosophy on balanced living. It is optimized for performance and utilizes several popular tools and libraries for a smooth, interactive user experience.
+This code snippets project provides a curated collection of reusable code examples, components, and patterns that can be easily integrated into various web development projects. It's built with performance and developer experience in mind, featuring a clean interface for browsing and implementing code snippets.
 
 ## Table of Contents
 
@@ -12,24 +12,49 @@ This portfolio website serves as a professional platform to showcase Danial’s 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Development Scripts](#development-scripts)
+- [Folder Structure](#folder-structure)
 
 ## Features
 
-- **Responsive Design**: Fully responsive layout with smooth animations.
-- **Interactive Animations**: Seamless transitions powered by Next View Transition.
-- **Tailwind CSS Integration**: Utility-first CSS framework for rapid UI development.
-- **TypeScript Support**: Enhanced type safety and development experience.
-- **Image Optimization**: Efficient image handling with Sharp for performance.
-- **Linting and Formatting**: Code quality maintained with ESLint and Prettier.
+- **Code Organization**: Well-structured collection of code snippets by category and technology.
+- **Syntax Highlighting**: Beautiful code presentation with proper syntax highlighting.
+- **Responsive Design**: Fully responsive layout for all screen sizes.
+- **Dark/Light Mode**: Theme support for comfortable viewing in any environment.
 
 ## Technologies Used
 
 - **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static website generation.
 - **[React](https://reactjs.org/)** - JavaScript library for building user interfaces.
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development.
 - **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing.
-- **[Sharp](https://sharp.pixelplumbing.com/)** - High-performance image processing.
-- **[Knip](https://knip.dev/)** - Tool for managing your Next.js project's file and folder structure.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development.
+- **[Prism.js](https://prismjs.com/)** - Lightweight syntax highlighting library.
+- **[React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)** - Syntax highlighting component for React.
+
+## Folder Structure
+
+```plaintext
+code-snippets/
+├── app/                       # Source files for app pages
+│   ├── snippets/              # Snippets section (page for code snippets)
+│   ├── categories/            # Categories section (page for snippet categories)
+│   ├── search/                # Search section (page for searching snippets)
+│   ├── layout.tsx             # Root layout component
+│   └── page.tsx               # Main landing page
+│
+├── components/                # Reusable components
+│   ├── ui/                    # UI(shadCN) components
+│   ├── snippets/              # Snippet-related components
+│   └── layout/                # Layout components
+│
+├── lib/                       # Utility functions and configurations
+│   ├── snippets/              # Snippet data and utilities
+│   ├── utils/                 # Helper functions
+│   └── types/                 # TypeScript type definitions
+│
+├── styles/                    # Global styles and Tailwind configuration
+├── public/                    # Static assets
+└── content/                   # Snippet content and metadata
+```
 
 ## Installation
 
@@ -38,8 +63,8 @@ To set up this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/Danielkhakbaz/Nextjs-Template
-   cd daniel-portfolio
+   git clone https://github.com/Danielkhakbaz/Code-Snippets
+   cd code-snippets
    ```
 
 2. **Install dependencies**:

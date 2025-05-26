@@ -8,12 +8,12 @@
         "mode": "full",
         "type": "shared",
         "pattern": [
-          "api/**/*",
-          "components/**/*",
-          "lib/**/*",
-          "hooks/**/*",
-          "utils/**/*",
-          "styles/**/*"
+          "shared/components/**/*",
+          "shared/constants/**/*",
+          "shared/hooks/**/*",
+          "shared/providers/**/*",
+          "shared/styles/**/*",
+          "shared/utils/**/*"
         ]
       },
       {
@@ -30,9 +30,15 @@
       },
       {
         "mode": "full",
-        "type": "neverImport",
-        "pattern": ["*"]
-      }
+        "type": "public",
+        "pattern": ["public/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "i18n",
+        "pattern": ["i18n/**/*"]
+      },
+      { "mode": "full", "type": "neverImport", "pattern": ["*"] }
     ]
   },
   "rules": {
@@ -43,25 +49,23 @@
       {
         "default": "disallow",
         "rules": [
-          {
-            "from": ["shared"],
-            "allow": ["shared"]
-          },
+          { "from": ["app"], "allow": ["shared", "public", "i18n"] },
+          { "from": ["shared"], "allow": ["shared", "public", "i18n"] },
           {
             "from": ["feature"],
             "allow": [
               "shared",
+              "public",
+              "i18n",
               ["feature", { "featureName": "${from.featureName}" }]
             ]
           },
           {
             "from": ["app", "neverImport"],
-            "allow": ["shared", "feature"]
+            "allow": ["shared", "feature", "public", "i18n"]
           },
-          {
-            "from": ["app"],
-            "allow": [["app", { "fileName": "*.css" }]]
-          }
+          { "from": ["app"], "allow": ["shared", "public", "i18n"] },
+          { "from": ["i18n"], "allow": ["i18n"] }
         ]
       }
     ]

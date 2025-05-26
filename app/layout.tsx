@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { LatoFont } from "@/styles/fonts";
+import { LatoFont } from "@/shared/styles/fonts";
 import { ViewTransitions } from "next-view-transitions";
-import "@/styles/globals.css";
+
+import { ThemeProvider } from "@/shared/providers/theme-provider";
+
+import "@/shared/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Code Snippets",
+  description: "a Project to explore the code snippets",
   other: {
     "theme-color": "#000000",
     "color-scheme": "dark",
@@ -30,8 +33,10 @@ type RootLayoutProps = {
 const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <ViewTransitions>
-      <html lang="en">
-        <body className={LatoFont.className}>{children}</body>
+      <html lang="en" suppressHydrationWarning>
+        <body className={LatoFont.className}>
+          <ThemeProvider>{children}</ThemeProvider>
+        </body>
       </html>
     </ViewTransitions>
   );
